@@ -1,0 +1,19 @@
+{
+  "name": "section-29-api-server",
+  "version": "1.0.0",
+  "main": "guessTheFrameAPI.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "groq-sdk": "^0.7.0"
+  }
+}
