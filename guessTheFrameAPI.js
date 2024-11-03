@@ -109,7 +109,7 @@ async function getRandomMovieFramePath(lang) {
                 const randBackdropIndex = Math.floor(Math.random() * backdrops.length);
                 return {
                     title: movieTitle,
-                    path: `https://image.tmdb.org/t/p/original${backdrops[randBackdropIndex].filePath}`, // Full URL for the image
+                    path: `https://image.tmdb.org/t/p/original${backdrops[randBackdropIndex].file_path}`, // Full URL for the image
                 };
             }
         }
@@ -124,7 +124,7 @@ async function getRandomMovieFramePath(lang) {
 // 2. Get request to get frame of a random movie
 app.get("/randomMovieFrame", async (req, res) => {
     let response = {};
-    if (res.query.lang === "en"){
+    if (req.query.lang === "en"){
         response = await getRandomMovieFramePath("en");
     }else{
         //be default this api will return hindi language movie random frame
